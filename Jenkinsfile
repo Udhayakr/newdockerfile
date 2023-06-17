@@ -5,7 +5,7 @@ pipeline {
         stage('scm') {
             steps {
                 // Build the Docker image using the Dockerfile in the repository
-                git branch: 'main', credentialsId: 'git', url: 'https://github.com/ganesh20101/newdockerfile.git'
+                git branch: 'main', credentialsId: 'git', url: 'https://github.com/udhayakr/newdockerfile.git'
             }
         }
         stage('doc build') {
@@ -38,7 +38,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Build the Docker image using the Dockerfile in the repository
-                deploy adapters: [tomcat9(credentialsId: 'ade06f69-aa16-44df-baa2-43e00c32183b', path: '', url: 'http://3.26.243.228:49155/')], contextPath: null, war: '**/*.war'
+                deploy adapters: [tomcat9(credentialsId: 'ade06f69-aa16-44df-baa2-43e00c32183b', path: '', url: 'http://13.233.44.205:49153/')], contextPath: null, war: '**/*.war'
             }
         }
     }
