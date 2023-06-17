@@ -14,10 +14,10 @@ RUN apt-get update \
 
 # Download and install Apache Tomcat
 ENV TOMCAT_MAJOR 9
-ENV TOMCAT_VERSION 9.0.75
+ENV TOMCAT_VERSION 9.0.76
 ENV CATALINA_HOME /opt/tomcat
 
-RUN curl -O https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.10/bin/apache-tomcat-10.1.10.tar.gz \
+RUN curl -O https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.76/bin/apache-tomcat-9.0.76.tar.gz \
     && tar -xf apache-tomcat-${TOMCAT_VERSION}.tar.gz \
     && mv apache-tomcat-${TOMCAT_VERSION} ${CATALINA_HOME} \
     && rm apache-tomcat-${TOMCAT_VERSION}.tar.gz
