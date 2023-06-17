@@ -38,7 +38,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Build the Docker image using the Dockerfile in the repository
-                deploy adapters: [tomcat9(credentialsId: 'ade06f69-aa16-44df-baa2-43e00c32183b', path: '', url: 'http://13.233.44.205:49153/')], contextPath: null, war: '**/*.war'
+                deploy adapters: [tomcat9(credentialsId: 'ade06f69-aa16-44df-baa2-43e00c32183b', path: '', url: 'http://3.7.45.231:49153/')], contextPath: null, war: '**/*.war'
             }
         }
     }
